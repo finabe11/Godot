@@ -10,7 +10,7 @@ var velocity = Vector2.ZERO
 export (float) var friction = 10
 export (float) var acceleration = 25
 
-enum state {IDLE, RUNNING, PUSHING, ROLL, JUMP, FALLING, ATTACK}
+enum state {IDLE, RUNNING, PUSHING, ROLL, JUMP, STARTJUMP, FALLING, ATTACK}
 
 onready var player_state = state.IDLE
 
@@ -36,9 +36,16 @@ func _physics_process(delta):
 	if velocity == Vector2.ZERO:
 		player_state = state.IDLE
 	elif velocity.x != 0 and Input.is_action_just_pressed("jump") and is_on_floor():
-		player_state = state.JUMP
+		player_state = state.STARTJUMP
 	elif velocity.x != 0:
 		player_state = state.RUNNING
-		
-		if not is_on_floor()
 	
+	if not is_on_floor():
+		if velocity.y < 0:
+			player_state = state.JUMP
+		if velocity.y > 0:
+			player_state = state.FALLING
+			
+	#set gravity
+	velocity.y += gravity * delta 
+	velocity = move_and_slide(velocity, Vector2.UP)
