@@ -19,7 +19,7 @@ func _ready():
 	pass
 
 func update_animation(anim):
-	$AnimationPlayer.play(anim)
+	pass
 	
 func handle_state(state):
 	pass 
@@ -45,7 +45,9 @@ func _physics_process(delta):
 			player_state = state.JUMP
 		if velocity.y > 0:
 			player_state = state.FALLING
-			
+	
+	handle_state(player_state)
+	update_animation(player_state)
 	#set gravity
 	velocity.y += gravity * delta 
 	velocity = move_and_slide(velocity, Vector2.UP)
