@@ -19,9 +19,11 @@ func _ready():
 	pass
 
 func update_animation(anim):
+	
 	pass
 	
 func handle_state(state):
+	print(state)
 	pass 
 
 func get_input():
@@ -33,11 +35,12 @@ func get_input():
 	
 func _physics_process(delta):
 	get_input()
+	print(is_on_floor())
 	if velocity == Vector2.ZERO:
 		player_state = state.IDLE
-	elif velocity.x != 0 and Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		player_state = state.STARTJUMP
-	elif velocity.x != 0:
+	if velocity.x != 0:
 		player_state = state.RUNNING
 	
 	if not is_on_floor():
