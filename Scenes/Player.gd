@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export (int) var speed = 120 
-export (int) var jump_spped = -180
+export (int) var jump_speed = -180
 export (int) var gravity = 400
 export (int) var slide_speed = 400
 
@@ -15,15 +15,17 @@ enum state {IDLE, RUNNING, PUSHING, ROLL, JUMP, STARTJUMP, FALLING, ATTACK}
 onready var player_state = state.IDLE
 
 func _ready():
-	$AnimationPlayer.play("idle ")
+	$AnimationPlayer.play("idle")
 	pass
 
 func update_animation(anim):
 	
 	pass
 	
-func handle_state(state):
-	print(state)
+func handle_state(player_state):
+	match(player_state):
+		state.STARTJUMP:
+			velocity.y = jump_speed 
 	pass 
 
 func get_input():
@@ -38,9 +40,9 @@ func _physics_process(delta):
 	print(is_on_floor())
 	if velocity == Vector2.ZERO:
 		player_state = state.IDLE
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		player_state = state.STARTJUMP
-	if velocity.x != 0:
+	elif velocity.x != 0:
 		player_state = state.RUNNING
 	
 	if not is_on_floor():
