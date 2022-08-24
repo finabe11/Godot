@@ -290,6 +290,9 @@ position = Vector2( -452, 152 )
 position = Vector2( -0.987656, 0.969697 )
 scale = Vector2( 0.987654, 0.969697 )
 
+[node name="PathFollow2D" parent="DoorAndButton/SpinningBlade/Path2D" index="0"]
+rotation = -2.93401
+
 [node name="TileMap" type="TileMap" parent="DoorAndButton"]
 position = Vector2( -372, 88 )
 tile_set = SubResource( 20 )
