@@ -55,6 +55,7 @@ anims/spin = SubResource( 2 )
 curve = SubResource( 3 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+rotation = -2.93401
 
 [node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D"]
 texture = ExtResource( 1 )
