@@ -13,6 +13,10 @@ config_version=4
 config/name="2D Platformer Game - Finn Abey"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameStats="*res://Scripts/game_stats.gd"
+
 [display]
 
 window/size/width=1280
