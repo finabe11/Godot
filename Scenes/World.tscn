@@ -399,6 +399,10 @@ shape = SubResource( 4 )
 position = Vector2( -34, 24 )
 texture = ExtResource( 12 )
 
+[node name="ArrowPlateLeft3" type="Sprite" parent="."]
+position = Vector2( -312, 40 )
+texture = ExtResource( 12 )
+
 [node name="ArrowPlateLeft2" type="Sprite" parent="."]
 position = Vector2( -405, 104 )
 texture = ExtResource( 12 )
@@ -425,11 +429,6 @@ texture = ExtResource( 11 )
 
 [node name="ArrowPlateRight3" type="Sprite" parent="."]
 position = Vector2( 279, 24 )
-texture = ExtResource( 11 )
-
-[node name="ArrowPlateRight4" type="Sprite" parent="."]
-position = Vector2( 248, 40 )
-rotation = 1.57079
 texture = ExtResource( 11 )
 
 [editable path="DoorAndButton"]
