@@ -1,5 +1,5 @@
 extends Node2D
-export (int) var follow_speed = 50
+export (int) var follow_speed = 100
 func _ready():
 	$AnimationPlayer.play("spin")
 	

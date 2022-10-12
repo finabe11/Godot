@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Y2Mate.is - Lo-fi Type Beat - Rain-ESUTA7utJ6c-160k-1655641202407.mp3-c420bc7a1a6c180ba36341c794fbd031.mp3str"
+
+[deps]
+
+source_file="res://Scripts/Y2Mate.is - Lo-fi Type Beat - Rain-ESUTA7utJ6c-160k-1655641202407.mp3"
+dest_files=[ "res://.import/Y2Mate.is - Lo-fi Type Beat - Rain-ESUTA7utJ6c-160k-1655641202407.mp3-c420bc7a1a6c180ba36341c794fbd031.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
