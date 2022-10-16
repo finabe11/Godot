@@ -253,18 +253,38 @@ position = Vector2( 279.5, 39 )
 scale = Vector2( 2.11444, 2.64 )
 texture = ExtResource( 16 )
 
+[node name="Background5" type="Sprite" parent="."]
+position = Vector2( -1586, 45 )
+scale = Vector2( 2.11444, 2.64 )
+texture = ExtResource( 16 )
+
 [node name="Background2" type="Sprite" parent="."]
-position = Vector2( 1879, 41 )
+position = Vector2( 2182, 38 )
 scale = Vector2( 2.11444, 2.64 )
 texture = ExtResource( 16 )
 
 [node name="Background3" type="Sprite" parent="."]
-position = Vector2( 1878, 684 )
+position = Vector2( 2183, 576 )
+scale = Vector2( 2.11444, 2.64 )
+texture = ExtResource( 16 )
+
+[node name="Background6" type="Sprite" parent="."]
+position = Vector2( 287, 579 )
+scale = Vector2( 2.11444, 2.64 )
+texture = ExtResource( 16 )
+
+[node name="Background8" type="Sprite" parent="."]
+position = Vector2( -1612, 579 )
 scale = Vector2( 2.11444, 2.64 )
 texture = ExtResource( 16 )
 
 [node name="Background4" type="Sprite" parent="."]
-position = Vector2( 1874, 1283 )
+position = Vector2( 2169, 1242 )
+scale = Vector2( 2.11444, 2.64 )
+texture = ExtResource( 16 )
+
+[node name="Background7" type="Sprite" parent="."]
+position = Vector2( 287, 1239 )
 scale = Vector2( 2.11444, 2.64 )
 texture = ExtResource( 16 )
 
@@ -408,6 +428,7 @@ anims/spin = SubResource( 2 )
 curve = SubResource( 23 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="SpinningBlade2/Path2D"]
+position = Vector2( -1, -1 )
 rotation = -2.93401
 rotate = false
 
