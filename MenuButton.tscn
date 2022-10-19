@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/04B_30__.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://MenuButton.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
@@ -10,6 +11,7 @@ font_data = ExtResource( 1 )
 margin_right = 1040.0
 margin_bottom = 20.0
 flat = true
+script = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
 anchor_right = 1.0
