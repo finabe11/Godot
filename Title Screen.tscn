@@ -44,6 +44,7 @@ margin_top = 139.0
 margin_right = 518.0
 margin_bottom = 199.0
 rect_min_size = Vector2( 360, 60 )
+scene_to_load = "res://Scenes/World.tscn"
 
 [node name="ContinueButton" parent="Menu/CentreRow/buttons" instance=ExtResource( 4 )]
 margin_top = 219.0
