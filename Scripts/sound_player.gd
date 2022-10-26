@@ -2,8 +2,11 @@ extends Node
 
 onready var music = AudioStreamPlayer.new()
 
+var music_tracks = {
+	"main":"res://Scripts/Y2Mate.is - Lo-fi Type Beat - Rain-ESUTA7utJ6c-160k-1655641202407"
+}
 
-
+var sound_effects = {}
 
 var music_db = 1
 var sound_db = 1
@@ -22,5 +25,10 @@ func _ready():
 	music.play()
 	
 	
-func _ready():
-	pass
+func play_sound_effect(sfx):
+	var sound = AudioStreamPlayer.new()
+	sound.stream = load(sound_effects[sfx])
+	add_child(sound)
+	sound.play()
+	yield(sound, "finished")
+	sound.queue_free()
