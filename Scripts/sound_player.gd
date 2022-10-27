@@ -3,10 +3,12 @@ extends Node
 onready var music = AudioStreamPlayer.new()
 
 var music_tracks = {
-	"main":"res://Scripts/Y2Mate.is - Lo-fi Type Beat - Rain-ESUTA7utJ6c-160k-1655641202407"
+	"main":"res://Scripts/Y2Mate.is - Lo-fi Type Beat - Rain-ESUTA7utJ6c-160k-1655641202407",
 }
 
-var sound_effects = {}
+var sound_effects = {
+	"jump":"res://Scripts/jump.wav"
+}
 
 var music_db = 1
 var sound_db = 1
