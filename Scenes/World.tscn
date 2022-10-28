@@ -273,7 +273,7 @@ scale = Vector2( 2.11444, 2.64 )
 texture = ExtResource( 16 )
 
 [node name="Background8" type="Sprite" parent="."]
-position = Vector2( -1612, 579 )
+position = Vector2( -1587, 579 )
 scale = Vector2( 2.11444, 2.64 )
 texture = ExtResource( 16 )
 
