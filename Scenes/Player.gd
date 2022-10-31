@@ -69,9 +69,15 @@ func _physics_process(delta):
 			player_state = state.JUMP
 		if velocity.y > 0:
 			player_state = state.FALLING
-	
+
+
 	handle_state(player_state)
 	update_animation(player_state)
 	#set gravity
 	velocity.y += gravity * delta 
 	velocity = move_and_slide(velocity, Vector2.UP)
+
+
+func _on_Area2D_area_entered(area):
+	if area.is_in_group("End"):
+		get_tree().change_scene("res://End Scene.tscn")
