@@ -7,7 +7,7 @@ var music_tracks = {
 }
 
 var sound_effects = {
-	"jump":"res://Scripts/jump1.wav",
+	"jump":"res://second_jump.wav",
 	"hit":"res://Scripts/hitHurt.wav"
 }
 
