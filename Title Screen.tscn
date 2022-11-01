@@ -82,3 +82,5 @@ text = "by Finn Abey
 
 [node name="FadeIn" parent="." instance=ExtResource( 5 )]
 visible = false
+
+[connection signal="pressed" from="Menu/CentreRow/buttons/ContinueButton" to="." method="_on_ContinueButton_pressed"]
