@@ -4,6 +4,10 @@
 [ext_resource path="res://BackButton.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/04B_30__.TTF" type="DynamicFontData" id=3]
 
+[sub_resource type="DynamicFont" id=5]
+size = 25
+font_data = ExtResource( 3 )
+
 [sub_resource type="DynamicFont" id=1]
 size = 24
 font_data = ExtResource( 3 )
@@ -15,16 +19,52 @@ font_data = ExtResource( 3 )
 size = 25
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=5]
-size = 25
-font_data = ExtResource( 3 )
-
 [node name="Options" instance=ExtResource( 1 )]
 anchor_top = 0.5
 anchor_bottom = 0.5
 script = ExtResource( 2 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." index="0"]
+[node name="VBoxContainer3" parent="." index="0"]
+margin_left = 523.0
+margin_top = 111.0
+margin_right = 776.0
+margin_bottom = 157.0
+
+[node name="Label" parent="VBoxContainer3" index="0"]
+margin_right = 253.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 5 )
+text = "Music Volume"
+
+[node name="HSlider2" type="HSlider" parent="VBoxContainer3" index="1"]
+margin_top = 30.0
+margin_right = 253.0
+margin_bottom = 46.0
+max_value = 1.0
+step = 0.1
+value = 1.0
+
+[node name="Button" parent="VBoxContainer3" index="2"]
+visible = false
+margin_top = 50.0
+margin_right = 253.0
+margin_bottom = 73.0
+
+[node name="CenterContainer" parent="." index="1"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 511.5
+margin_top = 4.0
+margin_right = 768.5
+margin_bottom = 4.0
+
+[node name="VBoxContainer" parent="CenterContainer" index="0"]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 291.0
+margin_bottom = 49.0
+
+[node name="VBoxContainer" parent="." index="2"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -34,7 +74,7 @@ margin_top = -83.0
 margin_right = 136.0
 margin_bottom = -31.0
 
-[node name="Label" type="Label" parent="VBoxContainer" index="0"]
+[node name="Label" parent="VBoxContainer" index="0"]
 margin_right = 259.0
 margin_bottom = 25.0
 custom_fonts/font = SubResource( 1 )
@@ -47,22 +87,7 @@ margin_bottom = 52.0
 custom_fonts/font = SubResource( 4 )
 text = "back"
 
-[node name="CenterContainer" parent="." index="1"]
-visible = false
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 511.5
-margin_top = 4.0
-margin_right = 768.5
-margin_bottom = 4.0
-
-[node name="VBoxContainer" parent="CenterContainer" index="0"]
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 277.0
-margin_bottom = 52.0
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="." index="2"]
+[node name="VBoxContainer2" parent="." index="3"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -86,27 +111,12 @@ max_value = 1.0
 step = 0.1
 value = 1.0
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="." index="3"]
-margin_left = 523.0
-margin_top = 111.0
-margin_right = 776.0
-margin_bottom = 157.0
+[node name="Label2" parent="VBoxContainer2" index="2"]
+visible = false
+margin_top = 50.0
+margin_bottom = 267.0
 
-[node name="Label" type="Label" parent="VBoxContainer3" index="0"]
-margin_right = 253.0
-margin_bottom = 26.0
-custom_fonts/font = SubResource( 5 )
-text = "Music Volume"
-
-[node name="HSlider2" type="HSlider" parent="VBoxContainer3" index="1"]
-margin_top = 30.0
-margin_right = 253.0
-margin_bottom = 46.0
-max_value = 1.0
-step = 0.1
-value = 1.0
-
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
-[connection signal="value_changed" from="VBoxContainer2/HSlider" to="." method="_on_HSlider_value_changed"]
 [connection signal="value_changed" from="VBoxContainer3/HSlider2" to="." method="_on_HSlider_value_changed"]
 [connection signal="value_changed" from="VBoxContainer3/HSlider2" to="." method="_on_HSlider2_value_changed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="value_changed" from="VBoxContainer2/HSlider" to="." method="_on_HSlider_value_changed"]

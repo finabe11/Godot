@@ -522,6 +522,14 @@ texture = ExtResource( 11 )
 position = Vector2( 279, 24 )
 texture = ExtResource( 11 )
 
+[node name="ArrowPlateRight6" type="Sprite" parent="."]
+position = Vector2( 249, 120 )
+texture = ExtResource( 11 )
+
+[node name="ArrowPlateRight7" type="Sprite" parent="."]
+position = Vector2( 1568, 584 )
+texture = ExtResource( 11 )
+
 [node name="killbox" parent="." instance=ExtResource( 14 )]
 position = Vector2( -925, 371 )
 
