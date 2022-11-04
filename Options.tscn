@@ -116,7 +116,7 @@ visible = false
 margin_top = 50.0
 margin_bottom = 267.0
 
-[connection signal="value_changed" from="VBoxContainer3/HSlider2" to="." method="_on_HSlider_value_changed"]
 [connection signal="value_changed" from="VBoxContainer3/HSlider2" to="." method="_on_HSlider2_value_changed"]
+[connection signal="value_changed" from="VBoxContainer3/HSlider2" to="." method="_on_HSlider_value_changed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
 [connection signal="value_changed" from="VBoxContainer2/HSlider" to="." method="_on_HSlider_value_changed"]
